@@ -41,14 +41,6 @@ TITLES = {
 NAME = "EASHRAQUE JAHAN EASHA"
 CONTACT = ["Denver, CO", "+1 (303) 520-7748", "EashraqueJahan.Easha@du.edu", "linkedin.com/in/easha003"]
 
-HEADLINE = {
-    "dae": "Data Analytics Engineering | Python · SQL · BigQuery · Airflow · PySpark · Tableau / Looker",
-    "ds": "Data Science | Sensor & Time-Series Analytics · Signal Processing · Machine Learning · Python",
-    "swe": "Software Engineering | Java · Python · Spring Boot · AWS / GCP · CI/CD · Test-Driven Development",
-    "ux": "Experience Design | Human-Centered Research · Figma Prototyping · Data Visualization · Front-End",
-    "combined": "Data Science & Engineering for Connected Mobility | Python · SQL · Java · Cloud · ML · Figma",
-}
-
 SUMMARY = {
     "dae": "Ph.D. student in Electrical and Computer Engineering (GPA 3.92/4.00) at the University of Denver, researching "
            "vehicle-to-vehicle communication for road safety. Builds reproducible Python data pipelines at scale (a "
@@ -239,7 +231,7 @@ WORK = [
 ]
 
 P_DS = dict(name="Smartphone Telematics: Driving-Event Detection",
-            tech="Python, pandas, SciPy, scikit-learn, TensorFlow, Plotly, Folium, Git", date="Nov 2026",
+            tech="Python, pandas, SciPy, scikit-learn, TensorFlow, Plotly, Folium, Git",
             bullets=[
                 "Cleaned and explored 500+ minutes of naturalistic smartphone driving data (UAH-DriveSet: accelerometer, "
                 "GPS); found and fixed sampling-rate jitter, sensor dropouts and timestamp misalignment.",
@@ -251,7 +243,7 @@ P_DS = dict(name="Smartphone Telematics: Driving-Event Detection",
                 "methodology, findings and recommendations in the project report.",
             ])
 P_DAE = dict(name="Mobility Analytics Pipeline on Google Cloud",
-             tech="Python, SQL, BigQuery, Apache Airflow, PySpark, Looker Studio, GitHub Actions", date="Nov 2026",
+             tech="Python, SQL, BigQuery, Apache Airflow, PySpark, Looker Studio, GitHub Actions",
              bullets=[
                  "Built an **Airflow** DAG that pulls Chicago taxi-trip records (BigQuery public dataset) into partitioned, "
                  "clustered **BigQuery** staging and analytics tables on a daily schedule.",
@@ -263,7 +255,6 @@ P_DAE = dict(name="Mobility Analytics Pipeline on Google Cloud",
              ])
 P_SWE = dict(name="Telematics Trip Ingestion Service",
              tech="Java 17, Spring Boot, PostgreSQL, JUnit 5, Mockito, Docker, GitHub Actions, Terraform, AWS",
-             date="Nov 2026",
              bullets=[
                  "Built a **Spring Boot REST API** that ingests trip telemetry events, validates payloads, stores them in "
                  "**PostgreSQL**, and serves per-trip summaries (distance, duration, harsh-event counts).",
@@ -275,7 +266,6 @@ P_SWE = dict(name="Telematics Trip Ingestion Service",
                  "added health and metrics endpoints with Spring Actuator for monitoring.",
              ])
 P_UX = dict(name="Driver Safety Insights: UX Case Study", tech="Figma, FigJam, MURAL, React, TypeScript",
-            date="Nov 2026",
             bullets=[
                 "Interviewed 5 drivers and 2 fleet managers; synthesized findings into an affinity map, personas and a "
                 "journey map for a driving-safety feedback product.",
@@ -313,10 +303,11 @@ PUBS = [
     "Islam, M.T., Shaan, M.N., **Easha, E.J.**, Minhaz, A.T., Shahnaz, C., & Fattah, S.A. (2017). Enhancement of noisy "
     "speech based on decision-directed Wiener approach in perceptual wavelet packet domain. *IEEE Region 10 Conference "
     "(TENCON)*. DOI: 10.1109/TENCON.2017.8228313",
-    "**Easha, E.J.**, et al. Journal manuscript on a hybrid VLC and 5G NR system for vehicle-to-vehicle communication. "
-    "*IEEE Transactions on Vehicular Technology*, under review.",
-    "**Easha, E.J.**, et al. Conference paper on pool-constrained optical offloading for hybrid NR sidelink and "
-    "vehicular VLC networks. In preparation for *IEEE WCNC 2027*.",
+    # placeholders: replace every [ ... ] with the real details
+    "**Easha, E.J.**, [Co-authors]. [Paper title]. *IEEE Transactions on Vehicular Technology*, under review.",
+    "**Easha, E.J.**, [Co-authors]. [Paper title]. *[Journal / Conference]*, under review.",
+    "**Easha, E.J.**, [Co-authors]. [Paper title]. *[Journal / Conference]*, submitted.",
+    "**Easha, E.J.**, [Co-authors]. [Paper title]. *IEEE WCNC 2027*, in preparation.",
 ]
 
 CERTS = [
@@ -370,7 +361,7 @@ TEX_HEAD = r"""\documentclass[10pt,letterpaper]{article}
 \titlespacing*{\section}{0pt}{5pt}{3pt}
 \setlist[itemize]{leftmargin=1.3em,itemsep=0.5pt,topsep=1pt,parsep=0pt,label=\textbullet}
 \newcommand{\entry}[4]{\textbf{#1}\hfill #2\\\textit{#3}\hfill\textit{#4}\par}
-\newcommand{\project}[3]{\textbf{#1}\hfill #3\\\textit{#2}\par}
+\newcommand{\project}[2]{\textbf{#1}\\\textit{#2}\par}
 \begin{document}
 """
 
@@ -378,8 +369,7 @@ TEX_HEAD = r"""\documentclass[10pt,letterpaper]{article}
 def build_tex(v):
     L = [TEX_HEAD]
     L.append(r"\begin{center}{\LARGE\bfseries\color{accent} %s}\\[3pt]" % tex_esc(NAME))
-    L.append(r"%s\\[2pt]" % r" \textbar{} ".join(tex_esc(c) for c in contact_items()))
-    L.append(r"\textit{%s}\end{center}\vspace{-6pt}" % tex_esc(HEADLINE[v]))
+    L.append(r"%s\end{center}\vspace{-6pt}" % r" \textbar{} ".join(tex_esc(c) for c in contact_items()))
 
     def entries(items):
         for e in items:
@@ -401,7 +391,7 @@ def build_tex(v):
                 r"\item \textbf{%s:} %s" % (tex_esc(a), tex_esc(b)) for a, b in SKILLS[v]) + r"\end{itemize}")
         elif sec == "projects":
             for p, b in projects_for(v):
-                L.append(r"\project{%s}{%s}{%s}" % (tex_esc(p["name"]), tex_esc(p["tech"]), tex_esc(p["date"])))
+                L.append(r"\project{%s}{%s}" % (tex_esc(p["name"]), tex_esc(p["tech"])))
                 L.append(r"\begin{itemize}" + "".join(r"\item " + tex_esc(x) for x in b) + r"\end{itemize}\vspace{2pt}")
         elif sec == "research":
             entries(RESEARCH)
@@ -465,11 +455,8 @@ def build_docx(v, path):
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     r = p.add_run(NAME)
     r.bold, r.font.size, r.font.color.rgb = True, Pt(18), ACCENT
-    p = tight(doc.add_paragraph(" | ".join(contact_items())), after=1)
+    p = tight(doc.add_paragraph(" | ".join(contact_items())), after=2)
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p = tight(doc.add_paragraph(), after=2)
-    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    add_runs(p, HEADLINE[v], italic=True)
 
     def heading(t):
         h = tight(doc.add_paragraph(), before=6, after=3)
@@ -510,7 +497,7 @@ def build_docx(v, path):
                 bullet("**%s:** %s" % (a, b))
         elif sec == "projects":
             for p_, bl in projects_for(v):
-                line(p_["name"], p_["date"]).paragraph_format.space_before = Pt(2)
+                line(p_["name"], "").paragraph_format.space_before = Pt(2)
                 add_runs(tight(doc.add_paragraph()), p_["tech"], italic=True)
                 for x in bl:
                     bullet(x)
