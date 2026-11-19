@@ -1,0 +1,70 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\definecolor{accent}{RGB}{31,56,100}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\color{accent}\large\bfseries\scshape}{}{0pt}{}[{\color{accent}\titlerule}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+\setlist[itemize]{leftmargin=1.3em,itemsep=0.5pt,topsep=1pt,parsep=0pt,label=\textbullet}
+\newcommand{\entry}[4]{\textbf{#1}\hfill #2\\\textit{#3}\hfill\textit{#4}\par}
+\newcommand{\project}[3]{\textbf{#1}\hfill #3\\\textit{#2}\par}
+\begin{document}
+
+\begin{center}{\LARGE\bfseries\color{accent} EASHRAQUE JAHAN EASHA}\\[3pt]
+Denver, CO \textbar{} +1 (303) 520-7748 \textbar{} EashraqueJahan.Easha@du.edu \textbar{} linkedin.com/in/easha003 \textbar{} github.com/easha003\\[2pt]
+\textit{Data Science | Sensor \& Time-Series Analytics \textperiodcentered{} Signal Processing \textperiodcentered{} Machine Learning \textperiodcentered{} Python}\end{center}\vspace{-6pt}
+\section*{Summary}
+Ph.D. student in Electrical and Computer Engineering (GPA 3.92/4.00) at the University of Denver, modeling vehicle-to-vehicle (V2V) communication on realistic urban traffic. Trained in \textbf{signal processing, detection and estimation, and random processes}, and applies them with \textbf{Python (pandas, NumPy, SciPy, scikit-learn, PyTorch)} to time-series forecasting, classification, bootstrap statistics and reinforcement learning on simulated driving data (20.9M packets). Presents findings clearly to technical and non-technical audiences.
+\section*{Education}
+\entry{Doctor of Philosophy (Ph.D.), Electrical and Computer Engineering}{Sep 2023 – Present}{Ritchie School of Engineering and Computer Science, University of Denver}{Denver, CO}
+\begin{itemize}\item \textbf{GPA:} 3.92/4.00 \quad|\quad \textbf{Advisor:} Dr. Mohammad Abdul Matin\item \textbf{Dissertation:} \textit{Modeling a hybrid system using Visible Light Communication and 5G New Radio}\end{itemize}
+\vspace{2pt}
+\entry{Master of Science (M.S.), Renewable Energy Technology}{May 2018 – Feb 2020}{Institute of Energy, University of Dhaka}{Dhaka, Bangladesh}
+\begin{itemize}\item \textbf{GPA:} 3.88/4.00 \quad|\quad \textbf{Thesis:} \textit{Fabrication of CdZnSe thin-film buffer layer by Chemical Bath Deposition and its compositional, structural, optical and morphological characterization}\end{itemize}
+\vspace{2pt}
+\entry{Bachelor of Science (B.Sc.), Electrical and Electronic Engineering}{Feb 2013 – Sep 2017}{Bangladesh University of Engineering and Technology (BUET)}{Dhaka, Bangladesh}
+\begin{itemize}\item Major in Communication, Minor in Power \quad|\quad \textbf{Thesis:} \textit{Enhancement of noisy speech based on decision-directed Wiener approach in perceptual wavelet packet domain} (published, IEEE TENCON 2017)\end{itemize}
+\vspace{2pt}
+\textbf{Relevant Coursework:} Random Signals and Processes, Digital Signal Processing, Signals and Systems, Communication Theory, Mobile Cellular Communication, Telecommunication Engineering
+\section*{Technical Skills}
+\begin{itemize}\item \textbf{Programming:} Python (pandas, NumPy, SciPy, statsmodels), SQL, MATLAB, Bash, Jupyter\item \textbf{Machine Learning:} scikit-learn, PyTorch, TensorFlow/Keras, Gymnasium, PPO and constrained (primal-dual) RL, feature engineering, cross-validation, OpenCV\item \textbf{Signal \& Time Series:} Kalman / AR(1) forecasting, digital filtering (Wiener, Butterworth), spectral and wavelet analysis, OFDM, channel modeling, detection and estimation theory\item \textbf{Statistics \& Visualization:} Bootstrap inference, isotonic regression, Matplotlib, seaborn, Plotly, Folium, Tableau\item \textbf{Data \& Tools:} Git/GitHub, Linux, pytest, Hypothesis, Parquet / PyArrow, PySpark, Google BigQuery, LaTeX\end{itemize}
+\section*{Research Experience}
+\entry{Graduate Researcher, Hybrid 5G NR and VLC for Vehicle-to-Vehicle Safety}{Sep 2023 – Present}{Ritchie School of Engineering and Computer Science, University of Denver}{Denver, CO}
+\begin{itemize}\item Built \textbf{GRAIL-V}, a Python framework (226 commits) evaluating hybrid \textbf{5G NR sidelink + vehicular VLC} links on a microscopic Manhattan-grid traffic model (car-following, 40 signalized junctions, mixed car/van/truck fleet); IEEE WCNC 2027 paper in preparation.\item Ran \textbf{20.9M-packet} evaluations across three traffic densities with a 20,000-replicate trajectory-block bootstrap; showed that the shared radio resource pool, not the link budget, limits reliability, and that load-aware optical offloading meets a 1-in-100,000 miss target that neither link meets alone.\item Designed a causal link selector from observable features (vehicle separation, field-of-view margin) that reaches \textbf{99.94\% precision}; solved the coupled allocation as a damped fixed-point problem.\item Designed a \textbf{predictive hybrid RF/VLC controller} (AR(1)/Kalman SNR forecasting, Markov blockage model, isotonic-regression reliability lookup tables), evaluated over 5 channel scenarios with 100 runs each; journal paper \textbf{under review in IEEE Transactions on Vehicular Technology}.\item Extending it to \textbf{constrained mean-field reinforcement learning}: PPO with primal-dual (Lagrangian) updates in \textbf{PyTorch / Gymnasium}, action masking, GAE, resumable checkpointed training and deterministic seeded rollouts, backed by 100+ test modules.\end{itemize}
+\vspace{2pt}
+\entry{Graduate Researcher, Thin-Film Solar Cell Buffer Layers}{Oct 2019 – Nov 2020}{Institute of Energy, University of Dhaka}{Dhaka, Bangladesh}
+\begin{itemize}\item Fabricated CdZnSe thin-film buffer layers by chemical bath deposition, characterized them with XRD, SEM, EDAX and UV-Vis, and compared measurements with CIGS solar-cell simulations in wxAMPS.\end{itemize}
+\vspace{2pt}
+\entry{Undergraduate Researcher, Speech Enhancement}{Oct 2016 – Jul 2017}{Bangladesh University of Engineering and Technology (BUET)}{Dhaka, Bangladesh}
+\begin{itemize}\item Designed a decision-directed \textbf{Wiener filter} in the perceptual wavelet-packet domain (MATLAB) to suppress noise in real-world speech signals; \textbf{published at IEEE TENCON 2017}.\end{itemize}
+\vspace{2pt}
+\section*{Projects}
+\project{Smartphone Telematics: Driving-Event Detection}{Python, pandas, SciPy, scikit-learn, TensorFlow, Plotly, Folium, Git}{Nov 2026}
+\begin{itemize}\item Cleaned and explored 500+ minutes of naturalistic smartphone driving data (UAH-DriveSet: accelerometer, GPS); found and fixed sampling-rate jitter, sensor dropouts and timestamp misalignment.\item Applied signal processing (Butterworth low-pass filtering, gravity removal, sliding-window statistical and spectral features) to engineer features for \textbf{harsh braking, rapid acceleration and sharp turns}.\item Trained and compared Random Forest, gradient boosting and a \textbf{1D-CNN (TensorFlow)} event detector with driver-grouped cross-validation; reported per-event precision, recall and F1.\item Mapped detected events along trip routes with \textbf{Folium} and built Plotly summaries; documented methodology, findings and recommendations in the project report.\end{itemize}\vspace{2pt}
+\project{Mobility Analytics Pipeline on Google Cloud}{Python, SQL, BigQuery, Apache Airflow, PySpark, Looker Studio, GitHub Actions}{Nov 2026}
+\begin{itemize}\item Built an \textbf{Airflow} DAG that pulls Chicago taxi-trip records (BigQuery public dataset) into partitioned, clustered \textbf{BigQuery} staging and analytics tables on a daily schedule.\item Wrote modular \textbf{SQL} transformations that produce trip-, zone- and hour-level datasets for analysts, with automated data-quality tests (nulls, ranges, duplicates, freshness) in pytest.\end{itemize}\vspace{2pt}
+\section*{Professional Experience}
+\entry{Graduate Service Assistant}{Sep 2023 – Dec 2025}{Department of Electrical and Computer Engineering, University of Denver}{Denver, CO}
+\begin{itemize}\item Graded Circuits I \& II, Instrumentation \& Data Acquisition, Optoelectronics, and Intro to Power \& Energy.\end{itemize}
+\vspace{2pt}
+\entry{Adjunct Faculty}{Sep 2022 – May 2023}{Department of Mathematics and Natural Sciences, BRAC University}{Dhaka, Bangladesh}
+\begin{itemize}\item Taught Differential \& Integral Calculus and Linear Algebra.\end{itemize}
+\vspace{2pt}
+\entry{Senior Deputy Assistant Director, Electric Vehicle Conversion Project}{Aug 2021 – Sep 2022}{Walton Hi-Tech Industries PLC}{Dhaka, Bangladesh}
+\begin{itemize}\item Sized and optimized the EV battery pack by modeling energy demand over the \textbf{WLTP drive cycle} (speed-time data).\item Analyzed Li-ion battery market data for Bangladesh and Southeast Asia; prepared technical specifications and benchmarked motor and battery options.\item Developed a Battery Management System (BMS) circuit design in EasyEDA.\end{itemize}
+\vspace{2pt}
+\entry{Lecturer}{Apr 2019 – Nov 2019}{Department of Electrical and Electronic Engineering, City University}{Dhaka, Bangladesh}
+\begin{itemize}\item Taught seven undergraduate courses: Energy Conversion I, Mobile Cellular Communication, Analog Integrated Circuits, Electric Circuits I \& II, Telecommunication Engineering, and Signal \& Linear System Analysis.\end{itemize}
+\vspace{2pt}
+\section*{Publications}
+\begin{itemize}\item Islam, M.T., Shaan, M.N., \textbf{Easha, E.J.}, Minhaz, A.T., Shahnaz, C., \& Fattah, S.A. (2017). Enhancement of noisy speech based on decision-directed Wiener approach in perceptual wavelet packet domain. \textit{IEEE Region 10 Conference (TENCON)}. DOI: 10.1109/TENCON.2017.8228313\item \textbf{Easha, E.J.}, et al. Journal manuscript on a hybrid VLC and 5G NR system for vehicle-to-vehicle communication. \textit{IEEE Transactions on Vehicular Technology}, under review.\item \textbf{Easha, E.J.}, et al. Conference paper on pool-constrained optical offloading for hybrid NR sidelink and vehicular VLC networks. In preparation for \textit{IEEE WCNC 2027}.\end{itemize}
+\section*{Certifications \& Service}
+\textbf{Supervised Machine Learning: Regression and Classification}, \textit{DeepLearning.AI \& Stanford University, Coursera}\hfill 2023\par\textbf{Excel Fundamentals, Data Visualization \& Power Tools for Data Analysis}, \textit{Macquarie University, Coursera}\hfill 2022 – 23\par\textbf{Amateur Radio Service Certificate}, \textit{Bangladesh Telecommunication Regulatory Commission (BTRC)}\hfill 2019\par\textbf{Volunteer}, \textit{IEEE ICC 2024, Denver, CO; Mojar School (education for street children), Dhaka}\hfill 2017 – 2024\par
+\end{document}

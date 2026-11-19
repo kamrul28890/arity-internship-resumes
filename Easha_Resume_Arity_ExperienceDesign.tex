@@ -1,0 +1,70 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\definecolor{accent}{RGB}{31,56,100}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\color{accent}\large\bfseries\scshape}{}{0pt}{}[{\color{accent}\titlerule}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+\setlist[itemize]{leftmargin=1.3em,itemsep=0.5pt,topsep=1pt,parsep=0pt,label=\textbullet}
+\newcommand{\entry}[4]{\textbf{#1}\hfill #2\\\textit{#3}\hfill\textit{#4}\par}
+\newcommand{\project}[3]{\textbf{#1}\hfill #3\\\textit{#2}\par}
+\begin{document}
+
+\begin{center}{\LARGE\bfseries\color{accent} EASHRAQUE JAHAN EASHA}\\[3pt]
+Denver, CO \textbar{} +1 (303) 520-7748 \textbar{} EashraqueJahan.Easha@du.edu \textbar{} linkedin.com/in/easha003 \textbar{} github.com/easha003\\[2pt]
+\textit{Experience Design | Human-Centered Research \textperiodcentered{} Figma Prototyping \textperiodcentered{} Data Visualization \textperiodcentered{} Front-End}\end{center}\vspace{-6pt}
+\section*{Summary}
+Ph.D. student in Electrical and Computer Engineering at the University of Denver whose research centers on driver and road safety. Turns complex technical systems and data into clear visual stories, a skill built over 4+ years of teaching engineering and mathematics to diverse learners. Practices \textbf{human-centered design} end to end: user interviews, synthesis, user flows, wireframes and interactive prototypes in \textbf{Figma}, usability testing, design systems, and front-end builds in \textbf{HTML/CSS, React and TypeScript}.
+\section*{Education}
+\entry{Doctor of Philosophy (Ph.D.), Electrical and Computer Engineering}{Sep 2023 – Present}{Ritchie School of Engineering and Computer Science, University of Denver}{Denver, CO}
+\begin{itemize}\item \textbf{GPA:} 3.92/4.00 \quad|\quad \textbf{Advisor:} Dr. Mohammad Abdul Matin\item \textbf{Dissertation:} \textit{Modeling a hybrid system using Visible Light Communication and 5G New Radio}\end{itemize}
+\vspace{2pt}
+\entry{Master of Science (M.S.), Renewable Energy Technology}{May 2018 – Feb 2020}{Institute of Energy, University of Dhaka}{Dhaka, Bangladesh}
+\begin{itemize}\item \textbf{GPA:} 3.88/4.00 \quad|\quad \textbf{Thesis:} \textit{Fabrication of CdZnSe thin-film buffer layer by Chemical Bath Deposition and its compositional, structural, optical and morphological characterization}\end{itemize}
+\vspace{2pt}
+\entry{Bachelor of Science (B.Sc.), Electrical and Electronic Engineering}{Feb 2013 – Sep 2017}{Bangladesh University of Engineering and Technology (BUET)}{Dhaka, Bangladesh}
+\begin{itemize}\item Major in Communication, Minor in Power \quad|\quad \textbf{Thesis:} \textit{Enhancement of noisy speech based on decision-directed Wiener approach in perceptual wavelet packet domain} (published, IEEE TENCON 2017)\end{itemize}
+\vspace{2pt}
+\textbf{Relevant Coursework:} Random Signals and Processes, Digital Signal Processing, Signals and Systems, Communication Theory, Mobile Cellular Communication, Telecommunication Engineering
+\section*{Technical Skills}
+\begin{itemize}\item \textbf{Design Practice:} Human-centered design, user interviews, affinity mapping, personas, journey maps, user flows, wireframing, interactive prototyping, usability testing, design systems, accessibility (WCAG)\item \textbf{Design Tools:} Figma, FigJam, Figma Make, MURAL, AI-assisted development (Cursor)\item \textbf{Front-End:} HTML, CSS, React, TypeScript\item \textbf{Data \& Visualization:} Python, SQL, Tableau, Matplotlib, seaborn, Plotly, Excel data visualization\item \textbf{Communication:} Teaching, technical presentations, research writing (IEEE), LaTeX\end{itemize}
+\section*{Projects}
+\project{Driver Safety Insights: UX Case Study}{Figma, FigJam, MURAL, React, TypeScript}{Nov 2026}
+\begin{itemize}\item Interviewed 5 drivers and 2 fleet managers; synthesized findings into an affinity map, personas and a journey map for a driving-safety feedback product.\item Explored concepts through sketching and Crazy 8s, then built \textbf{user flows, wireframes and an interactive Figma prototype} of a mobile safety-score app and a fleet analytics dashboard.\item Ran two rounds of moderated \textbf{usability testing} (5 participants each) and iterated; checked accessibility against WCAG AA (contrast, touch targets, color-independent charts).\item Created a small \textbf{design system} (tokens, components) in Figma and implemented the dashboard in \textbf{React + TypeScript}, using data from the telematics event-detection project.\end{itemize}\vspace{2pt}
+\project{Smartphone Telematics: Driving-Event Detection}{Python, pandas, SciPy, scikit-learn, TensorFlow, Plotly, Folium, Git}{Nov 2026}
+\begin{itemize}\item Analyzed smartphone driving-sensor data in Python and turned detected harsh-driving events into interactive \textbf{Folium} route maps and Plotly charts for non-technical audiences.\end{itemize}\vspace{2pt}
+\section*{Research Experience}
+\entry{Graduate Researcher, Hybrid 5G NR and VLC for Vehicle-to-Vehicle Safety}{Sep 2023 – Present}{Ritchie School of Engineering and Computer Science, University of Denver}{Denver, CO}
+\begin{itemize}\item Researching hybrid \textbf{5G NR + visible light} vehicle-to-vehicle communication for collision avoidance on a realistic Manhattan-grid traffic model (GRAIL-V, 226 commits); IEEE WCNC 2027 paper in preparation.\item Distilled 20.9M simulated packets into three clear claims with supporting figures, traffic-scene visuals and supervisor briefing decks; journal paper \textbf{under review in IEEE Transactions on Vehicular Technology}.\item Design decision logic around what a vehicle can actually observe, kept separate from ground truth, a discipline that carries over directly to user research.\end{itemize}
+\vspace{2pt}
+\entry{Graduate Researcher, Thin-Film Solar Cell Buffer Layers}{Oct 2019 – Nov 2020}{Institute of Energy, University of Dhaka}{Dhaka, Bangladesh}
+\begin{itemize}\item Fabricated CdZnSe thin-film buffer layers by chemical bath deposition, characterized them with XRD, SEM, EDAX and UV-Vis, and compared measurements with CIGS solar-cell simulations in wxAMPS.\end{itemize}
+\vspace{2pt}
+\entry{Undergraduate Researcher, Speech Enhancement}{Oct 2016 – Jul 2017}{Bangladesh University of Engineering and Technology (BUET)}{Dhaka, Bangladesh}
+\begin{itemize}\item Enhanced noisy speech with a decision-directed Wiener filtering approach in the perceptual wavelet-packet domain (MATLAB); \textbf{published at IEEE TENCON 2017}.\end{itemize}
+\vspace{2pt}
+\section*{Professional Experience}
+\entry{Graduate Service Assistant}{Sep 2023 – Dec 2025}{Department of Electrical and Computer Engineering, University of Denver}{Denver, CO}
+\begin{itemize}\item Graded Circuits I \& II, Instrumentation \& Data Acquisition, Optoelectronics, and Intro to Power \& Energy.\end{itemize}
+\vspace{2pt}
+\entry{Adjunct Faculty}{Sep 2022 – May 2023}{Department of Mathematics and Natural Sciences, BRAC University}{Dhaka, Bangladesh}
+\begin{itemize}\item Taught Differential \& Integral Calculus and Linear Algebra, explaining abstract concepts to students from varied backgrounds.\end{itemize}
+\vspace{2pt}
+\entry{Senior Deputy Assistant Director, Electric Vehicle Conversion Project}{Aug 2021 – Sep 2022}{Walton Hi-Tech Industries PLC}{Dhaka, Bangladesh}
+\begin{itemize}\item Sized and optimized the EV battery pack by modeling energy demand over the \textbf{WLTP drive cycle} (speed-time data).\item Analyzed Li-ion battery market data for Bangladesh and Southeast Asia; prepared technical specifications and benchmarked motor and battery options.\item Developed a Battery Management System (BMS) circuit design in EasyEDA.\end{itemize}
+\vspace{2pt}
+\entry{Lecturer}{Apr 2019 – Nov 2019}{Department of Electrical and Electronic Engineering, City University}{Dhaka, Bangladesh}
+\begin{itemize}\item Taught seven undergraduate courses: Energy Conversion I, Mobile Cellular Communication, Analog Integrated Circuits, Electric Circuits I \& II, Telecommunication Engineering, and Signal \& Linear System Analysis.\end{itemize}
+\vspace{2pt}
+\section*{Publications}
+\begin{itemize}\item Islam, M.T., Shaan, M.N., \textbf{Easha, E.J.}, Minhaz, A.T., Shahnaz, C., \& Fattah, S.A. (2017). Enhancement of noisy speech based on decision-directed Wiener approach in perceptual wavelet packet domain. \textit{IEEE Region 10 Conference (TENCON)}. DOI: 10.1109/TENCON.2017.8228313\item \textbf{Easha, E.J.}, et al. Journal manuscript on a hybrid VLC and 5G NR system for vehicle-to-vehicle communication. \textit{IEEE Transactions on Vehicular Technology}, under review.\item \textbf{Easha, E.J.}, et al. Conference paper on pool-constrained optical offloading for hybrid NR sidelink and vehicular VLC networks. In preparation for \textit{IEEE WCNC 2027}.\end{itemize}
+\section*{Certifications \& Service}
+\textbf{Supervised Machine Learning: Regression and Classification}, \textit{DeepLearning.AI \& Stanford University, Coursera}\hfill 2023\par\textbf{Excel Fundamentals, Data Visualization \& Power Tools for Data Analysis}, \textit{Macquarie University, Coursera}\hfill 2022 – 23\par\textbf{Amateur Radio Service Certificate}, \textit{Bangladesh Telecommunication Regulatory Commission (BTRC)}\hfill 2019\par\textbf{Volunteer}, \textit{IEEE ICC 2024, Denver, CO; Mojar School (education for street children), Dhaka}\hfill 2017 – 2024\par
+\end{document}

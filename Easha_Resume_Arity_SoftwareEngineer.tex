@@ -1,0 +1,68 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\definecolor{accent}{RGB}{31,56,100}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\color{accent}\large\bfseries\scshape}{}{0pt}{}[{\color{accent}\titlerule}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+\setlist[itemize]{leftmargin=1.3em,itemsep=0.5pt,topsep=1pt,parsep=0pt,label=\textbullet}
+\newcommand{\entry}[4]{\textbf{#1}\hfill #2\\\textit{#3}\hfill\textit{#4}\par}
+\newcommand{\project}[3]{\textbf{#1}\hfill #3\\\textit{#2}\par}
+\begin{document}
+
+\begin{center}{\LARGE\bfseries\color{accent} EASHRAQUE JAHAN EASHA}\\[3pt]
+Denver, CO \textbar{} +1 (303) 520-7748 \textbar{} EashraqueJahan.Easha@du.edu \textbar{} linkedin.com/in/easha003 \textbar{} github.com/easha003\\[2pt]
+\textit{Software Engineering | Java \textperiodcentered{} Python \textperiodcentered{} Spring Boot \textperiodcentered{} AWS / GCP \textperiodcentered{} CI/CD \textperiodcentered{} Test-Driven Development}\end{center}\vspace{-6pt}
+\section*{Summary}
+Ph.D. student in Electrical and Computer Engineering (GPA 3.92/4.00) at the University of Denver who builds research software: a 226-commit Python simulation framework with a CLI, validated configs and pytest/Hypothesis test suites under strict mypy typing, plus a PyTorch reinforcement-learning extension. Writes \textbf{Python, Java and C++}, and is building a \textbf{Spring Boot} telematics service with PostgreSQL, OAuth2/JWT, JUnit/Mockito TDD, Docker, GitHub Actions CI/CD and Terraform on AWS. Comfortable in Linux/bash and quick to learn new languages.
+\section*{Education}
+\entry{Doctor of Philosophy (Ph.D.), Electrical and Computer Engineering}{Sep 2023 – Present}{Ritchie School of Engineering and Computer Science, University of Denver}{Denver, CO}
+\begin{itemize}\item \textbf{GPA:} 3.92/4.00 \quad|\quad \textbf{Advisor:} Dr. Mohammad Abdul Matin\item \textbf{Dissertation:} \textit{Modeling a hybrid system using Visible Light Communication and 5G New Radio}\end{itemize}
+\vspace{2pt}
+\entry{Master of Science (M.S.), Renewable Energy Technology}{May 2018 – Feb 2020}{Institute of Energy, University of Dhaka}{Dhaka, Bangladesh}
+\begin{itemize}\item \textbf{GPA:} 3.88/4.00 \quad|\quad \textbf{Thesis:} \textit{Fabrication of CdZnSe thin-film buffer layer by Chemical Bath Deposition and its compositional, structural, optical and morphological characterization}\end{itemize}
+\vspace{2pt}
+\entry{Bachelor of Science (B.Sc.), Electrical and Electronic Engineering}{Feb 2013 – Sep 2017}{Bangladesh University of Engineering and Technology (BUET)}{Dhaka, Bangladesh}
+\begin{itemize}\item Major in Communication, Minor in Power \quad|\quad \textbf{Thesis:} \textit{Enhancement of noisy speech based on decision-directed Wiener approach in perceptual wavelet packet domain} (published, IEEE TENCON 2017)\end{itemize}
+\vspace{2pt}
+\textbf{Relevant Coursework:} Random Signals and Processes, Digital Signal Processing, Signals and Systems, Communication Theory, Mobile Cellular Communication, Telecommunication Engineering
+\section*{Technical Skills}
+\begin{itemize}\item \textbf{Languages:} Python, Java, C++, SQL, Bash, MATLAB, HTML/CSS\item \textbf{Python Engineering:} Typed packages (strict mypy), Typer CLIs, Pydantic, pytest, Hypothesis property tests, ruff, PyTorch\item \textbf{Backend:} Spring Boot, Spring Security (OAuth2 / JWT), REST API design, PostgreSQL, Docker, OWASP secure-coding practices\item \textbf{Testing \& CI/CD:} JUnit 5, Mockito, Testcontainers, Gradle, GitHub Actions, test-driven development\item \textbf{Cloud \& Infrastructure:} AWS (S3, Lambda, EC2, IAM), GCP (BigQuery), Terraform, Linux/Unix\item \textbf{Fundamentals:} Object-oriented design, data structures and algorithms, numerical simulation, embedded hardware design (EasyEDA, PSpice)\end{itemize}
+\section*{Projects}
+\project{Telematics Trip Ingestion Service}{Java 17, Spring Boot, PostgreSQL, JUnit 5, Mockito, Docker, GitHub Actions, Terraform, AWS}{Nov 2026}
+\begin{itemize}\item Built a \textbf{Spring Boot REST API} that ingests trip telemetry events, validates payloads, stores them in \textbf{PostgreSQL}, and serves per-trip summaries (distance, duration, harsh-event counts).\item Secured endpoints with \textbf{OAuth2 / JWT} (Spring Security) and applied OWASP practices: input validation, parameterized queries, and least-privilege IAM.\item Developed \textbf{test-first} with JUnit 5 and Mockito plus Testcontainers integration tests; a \textbf{GitHub Actions CI/CD} pipeline builds with Gradle, runs tests and publishes a Docker image.\item Provisioned \textbf{AWS} resources (S3 raw-event archive, Lambda processor, IAM roles) with \textbf{Terraform}; added health and metrics endpoints with Spring Actuator for monitoring.\end{itemize}\vspace{2pt}
+\section*{Research Experience}
+\entry{Graduate Researcher, Hybrid 5G NR and VLC for Vehicle-to-Vehicle Safety}{Sep 2023 – Present}{Ritchie School of Engineering and Computer Science, University of Denver}{Denver, CO}
+\begin{itemize}\item Built \textbf{GRAIL-V}, a Python framework (226 commits) evaluating hybrid \textbf{5G NR sidelink + vehicular VLC} links on a microscopic Manhattan-grid traffic model (car-following, 40 signalized junctions, mixed car/van/truck fleet); IEEE WCNC 2027 paper in preparation.\item Structured it as a typed Python package: Typer CLI, Pydantic-validated layered YAML configs, Parquet (PyArrow) traces, and artifact manifests (commit, config hash, seeds, SHA-256 per file) for reproducibility; tested with pytest and Hypothesis (unit, integration, regression, statistical), strict mypy and ruff.\item Extending it to \textbf{constrained mean-field reinforcement learning}: PPO with primal-dual (Lagrangian) updates in \textbf{PyTorch / Gymnasium}, action masking, GAE, resumable checkpointed training and deterministic seeded rollouts, backed by 100+ test modules.\item Wrote a \textbf{5G NR link-level simulator} from scratch in NumPy (OFDM, pilot-based channel estimation and equalization, LDPC coding, 3GPP CDL/TDL-C fading) plus a DCO-OFDM visible-light physical layer for BLER and URLLC latency sweeps.\item Designed a \textbf{predictive hybrid RF/VLC controller} (AR(1)/Kalman SNR forecasting, Markov blockage model, isotonic-regression reliability lookup tables), evaluated over 5 channel scenarios with 100 runs each; journal paper \textbf{under review in IEEE Transactions on Vehicular Technology}.\end{itemize}
+\vspace{2pt}
+\entry{Graduate Researcher, Thin-Film Solar Cell Buffer Layers}{Oct 2019 – Nov 2020}{Institute of Energy, University of Dhaka}{Dhaka, Bangladesh}
+\begin{itemize}\item Fabricated CdZnSe thin-film buffer layers by chemical bath deposition, characterized them with XRD, SEM, EDAX and UV-Vis, and compared measurements with CIGS solar-cell simulations in wxAMPS.\end{itemize}
+\vspace{2pt}
+\entry{Undergraduate Researcher, Speech Enhancement}{Oct 2016 – Jul 2017}{Bangladesh University of Engineering and Technology (BUET)}{Dhaka, Bangladesh}
+\begin{itemize}\item Enhanced noisy speech with a decision-directed Wiener filtering approach in the perceptual wavelet-packet domain (MATLAB); \textbf{published at IEEE TENCON 2017}.\end{itemize}
+\vspace{2pt}
+\section*{Professional Experience}
+\entry{Graduate Service Assistant}{Sep 2023 – Dec 2025}{Department of Electrical and Computer Engineering, University of Denver}{Denver, CO}
+\begin{itemize}\item Graded Circuits I \& II, Instrumentation \& Data Acquisition, Optoelectronics, and Intro to Power \& Energy.\end{itemize}
+\vspace{2pt}
+\entry{Adjunct Faculty}{Sep 2022 – May 2023}{Department of Mathematics and Natural Sciences, BRAC University}{Dhaka, Bangladesh}
+\begin{itemize}\item Taught Differential \& Integral Calculus and Linear Algebra.\end{itemize}
+\vspace{2pt}
+\entry{Senior Deputy Assistant Director, Electric Vehicle Conversion Project}{Aug 2021 – Sep 2022}{Walton Hi-Tech Industries PLC}{Dhaka, Bangladesh}
+\begin{itemize}\item Sized and optimized the EV battery pack by modeling energy demand over the \textbf{WLTP drive cycle} (speed-time data).\item Analyzed Li-ion battery market data for Bangladesh and Southeast Asia; prepared technical specifications and benchmarked motor and battery options.\item Developed a Battery Management System (BMS) circuit design in EasyEDA.\end{itemize}
+\vspace{2pt}
+\entry{Lecturer}{Apr 2019 – Nov 2019}{Department of Electrical and Electronic Engineering, City University}{Dhaka, Bangladesh}
+\begin{itemize}\item Taught seven undergraduate courses: Energy Conversion I, Mobile Cellular Communication, Analog Integrated Circuits, Electric Circuits I \& II, Telecommunication Engineering, and Signal \& Linear System Analysis.\end{itemize}
+\vspace{2pt}
+\section*{Publications}
+\begin{itemize}\item Islam, M.T., Shaan, M.N., \textbf{Easha, E.J.}, Minhaz, A.T., Shahnaz, C., \& Fattah, S.A. (2017). Enhancement of noisy speech based on decision-directed Wiener approach in perceptual wavelet packet domain. \textit{IEEE Region 10 Conference (TENCON)}. DOI: 10.1109/TENCON.2017.8228313\item \textbf{Easha, E.J.}, et al. Journal manuscript on a hybrid VLC and 5G NR system for vehicle-to-vehicle communication. \textit{IEEE Transactions on Vehicular Technology}, under review.\item \textbf{Easha, E.J.}, et al. Conference paper on pool-constrained optical offloading for hybrid NR sidelink and vehicular VLC networks. In preparation for \textit{IEEE WCNC 2027}.\end{itemize}
+\section*{Certifications \& Service}
+\textbf{Supervised Machine Learning: Regression and Classification}, \textit{DeepLearning.AI \& Stanford University, Coursera}\hfill 2023\par\textbf{Excel Fundamentals, Data Visualization \& Power Tools for Data Analysis}, \textit{Macquarie University, Coursera}\hfill 2022 – 23\par\textbf{Amateur Radio Service Certificate}, \textit{Bangladesh Telecommunication Regulatory Commission (BTRC)}\hfill 2019\par\textbf{Volunteer}, \textit{IEEE ICC 2024, Denver, CO; Mojar School (education for street children), Dhaka}\hfill 2017 – 2024\par
+\end{document}
